@@ -2,14 +2,15 @@
 
 [English](README.md) · [Como contribuir (em inglês)](CONTRIBUTING.md)
 
-Skill reutilizável para retomar, executar e revisar projetos de desenvolvimento pelas instruções do projeto, fontes acessíveis e estado real.
+Skill reutilizável para concluir incrementos de desenvolvimento autorizados pelas instruções do projeto, fontes acessíveis e estado real.
 
 Aplica-se a código, aplicativos, sites, bibliotecas e ferramentas, com ou sem Git e documentação de estado. Adapta o fluxo à linguagem, ao ambiente e às convenções do projeto.
 
 ## O que ela faz
 
 - Reconstrói o contexto e distingue estado atual de registros históricos.
-- Conclui o trabalho autorizado, preservando alterações existentes.
+- Implementa, valida, corrige e registra cada incremento autorizado, preservando alterações existentes.
+- Busca o contexto acessível diretamente e continua o trabalho autorizado sem pedir que você transporte prompts entre chats.
 - Revisa um alvo definido contra uma base confirmada e relata achados com evidências.
 - Escolhe validações pertinentes e identifica resultados reutilizados e limitações.
 - Deixa contexto suficiente para a próxima sessão continuar.
@@ -41,10 +42,18 @@ $retomar-projeto Implemente [funcionalidade]. Critérios de aceitação: [result
 ```
 
 ```text
+$retomar-projeto Conclua os incrementos autorizados deste plano, validando e registrando cada um antes de continuar.
+```
+
+```text
 $retomar-projeto Revise esta branch contra [base], sem editar código.
 ```
 
-Forneça as fontes e ferramentas pertinentes. A skill oferece instruções reutilizáveis; não concede acesso a arquivos, contas ou ambientes de outra pessoa. A autorização segue a solicitação e o ambiente de execução.
+Pedidos de execução devem produzir um resultado implementado e verificado, sem encerrar apenas com um plano ou um prompt para colar em outro chat. O agente busca contexto pelas ferramentas disponíveis e atualiza os registros do projeto diretamente. Avança ao próximo incremento quando ele já estiver autorizado. Pedidos explícitos de planejamento ou revisão sem alterações mantêm esse escopo.
+
+Se um roteiro estiver inacessível, o agente pode trabalhar a partir do objetivo autorizado e das evidências disponíveis quando forem suficientes; caso contrário, solicita apenas a decisão ou o acesso que falta. Uma verificação bloqueada é registrada como validação incompleta. A conclusão técnica não substitui uma aprovação humana exigida pelo projeto.
+
+Disponibilize as fontes do projeto e as ferramentas necessárias. A skill oferece instruções; não concede acesso a arquivos ou contas, não sincroniza automaticamente ChatGPT/Work/Codex nem agenda execução sem supervisão. A autorização segue a solicitação e o ambiente de execução. Veja [como skills complementam ferramentas](https://developers.openai.com/plugins/concepts/skills).
 
 ## Contribuir
 
