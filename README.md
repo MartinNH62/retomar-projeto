@@ -1,71 +1,77 @@
-# Retomar Projeto
+# Resume Project (`retomar-projeto`)
 
-Skill para retomar, executar e revisar projetos de desenvolvimento com base nas instruções, fontes e estado real disponíveis.
+[Português (Brasil)](README.pt-BR.md) · [Contributing](CONTRIBUTING.md)
 
-Aplica-se a código, aplicativos, sites, bibliotecas e ferramentas, com ou sem Git e documentação de estado. Adapta o fluxo à linguagem, ao ambiente e às convenções do projeto.
+A reusable Codex skill for resuming, executing, and reviewing development work from project instructions, accessible sources, and actual state.
 
-## O que ela faz
+Works across codebases, applications, websites, libraries, and tools, with or without Git or state documentation. It adapts to the project's language, environment, and conventions. The stable identifier `retomar-projeto` means “resume project” in Portuguese.
 
-- Reconstrói o contexto pelas fontes acessíveis e distingue estado atual de registros históricos.
-- Conduz o objetivo autorizado até uma entrega verificável, preservando alterações existentes.
-- Revisa mudanças com alvo e base definidos, relatando achados com evidências.
-- Escolhe validações proporcionais à mudança e identifica resultados reutilizados e limitações.
-- Deixa informações suficientes para uma próxima sessão continuar.
+## What it does
 
-## Instalar pelo GitHub
+- Reconstructs context and distinguishes current state from historical records.
+- Completes authorized work while preserving existing changes.
+- Reviews a defined target against a confirmed base and reports evidence-backed findings.
+- Selects appropriate validation and identifies reused results and limitations.
+- Leaves enough context for the next session to continue.
 
-Abra um chat no Codex e envie:
+The skill instructions and interface metadata are in English so an international community can review and improve them. You can use the skill in Portuguese or another language; responses follow your language preference. Translation alone is not a demonstrated performance improvement.
+
+## Install
+
+In a local Codex chat, send:
 
 ```text
-$skill-installer Instale a skill de https://github.com/MartinNH62/retomar-projeto/tree/main/skills/retomar-projeto
+$skill-installer Install the skill from https://github.com/MartinNH62/retomar-projeto/tree/main/skills/retomar-projeto
 ```
 
-O instalador integrado aceita skills em repositórios públicos do GitHub. Depois da instalação, a skill fica disponível no próximo turno. Se não aparecer, reinicie o Codex.
+After installation, the skill is available on your next turn. Restart Codex if it does not appear.
 
-## Instalar a partir do pacote ZIP
+Alternatively, download and extract the repository ZIP through GitHub's **Code → Download ZIP** menu. Ask Codex to install the extracted `skills/retomar-projeto` directory into your personal skills directory, preserving an existing installation if there is one. For team use, copy it into `.agents/skills/retomar-projeto` in the team's repository, following your environment's conventions.
 
-Extraia o ZIP. A pasta que precisa ser instalada é `skills/retomar-projeto`, contendo `SKILL.md` e `agents/openai.yaml`.
+## Use
 
-Abra um chat local no Codex, indique o caminho da pasta extraída e solicite:
-
-```text
-Instale a skill retomar-projeto desta pasta na minha pasta pessoal de skills do Codex, preservando os arquivos e avisando se já existir uma versão instalada.
-```
-
-Para compartilhar com uma equipe dentro de um projeto, copie essa pasta para `.agents/skills/retomar-projeto` no repositório da equipe, seguindo as convenções do ambiente.
-
-## Usar
-
-Abra o projeto ou informe sua pasta/repositório e descreva o objetivo:
+Open your project or specify its directory/repository, then describe the objective:
 
 ```text
-$retomar-projeto Retome este projeto e conclua o objetivo já autorizado.
+$retomar-projeto Resume this project and complete the already authorized objective.
 ```
 
 ```text
-$retomar-projeto Implemente esta funcionalidade: [descrição]. Critérios de aceitação: [resultados esperados].
+$retomar-projeto Implement [feature]. Acceptance criteria: [observable outcomes].
 ```
 
 ```text
-$retomar-projeto Revise as mudanças desta branch contra [base], sem editar código.
+$retomar-projeto Review this branch against [base] without editing code.
 ```
 
-Informe os caminhos ou fontes necessários e mantenha disponíveis as ferramentas do projeto. A skill fornece instruções reutilizáveis; não fornece acesso a arquivos, contas ou ambientes de outra pessoa. Permissões e aprovações continuam seguindo a solicitação e o ambiente de quem a usa.
+Provide the relevant sources and project tools. A skill supplies reusable instructions; it does not grant access to someone else's files, accounts, or environment. Authorization follows the user's request and execution environment.
 
-## Conteúdo
+## Contribute
+
+Reports, focused improvements, examples, and documentation contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), [open an issue](https://github.com/MartinNH62/retomar-projeto/issues), or submit a pull request. English is preferred for shared discussions; Portuguese reports are welcome too.
+
+## Structure
 
 ```text
 README.md
+README.pt-BR.md
+CONTRIBUTING.md
+LICENSE
 skills/
   retomar-projeto/
+    LICENSE
     SKILL.md
     agents/
       openai.yaml
 ```
 
-A skill contém apenas instruções e metadados de interface. Não executa um script próprio de instalação e não depende de credenciais ou serviços específicos.
+The installable skill contains instructions and interface metadata only, with no executable helper scripts or required service credentials. Repository documentation stays outside the installed skill.
 
-## Documentação
+## License
 
-- [Skills e instalação no Codex](https://learn.chatgpt.com/docs/build-skills)
-- [Skills e plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
+[MIT](LICENSE). Contributions are submitted under the same license.
+
+## Official documentation
+
+- [Build skills](https://learn.chatgpt.com/docs/build-skills)
+- [Skills and plugins](https://learn.chatgpt.com/docs/skills-and-plugins)
