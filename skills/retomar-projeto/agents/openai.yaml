@@ -1,6 +1,6 @@
 interface:
   display_name: "Resume Project"
-  short_description: "Resume, execute, and review development work"
-  default_prompt: "Use $retomar-projeto to reconstruct this project's context and complete the authorized objective with appropriate validation."
+  short_description: "Complete authorized increments with validation"
+  default_prompt: "Use $retomar-projeto to complete this project's authorized increments, implementing, validating, repairing, and recording each result without manual handoffs."
 policy:
   allow_implicit_invocation: true
