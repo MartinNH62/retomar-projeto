@@ -36,8 +36,11 @@ For changes that affect decisions, try relevant scenarios in an isolated disposa
 
 - Resume without Git or state documentation.
 - Implement a small objective while preserving existing staged/untracked edits.
+- Complete an authorized sequence without stopping at a plan or requesting manual chat-to-chat handoffs.
+- Encounter an inaccessible referenced attachment while the authorized objective is fully specified in accessible sources.
 - Review against an explicitly specified base without editing files.
 - Encounter a blocked check, stale test result, or conflicting edit and accurately report the limitation.
+- Finish technical work while leaving a required human decision gate pending.
 
 Record the setup, checks, observed outcome, and limitations. Do not require live accounts, paid API calls, or access to someone else's project to contribute. If claiming that a translation improves performance, compare equivalent tasks with the same model/settings and multiple runs; distinguish readability improvements from measured execution improvements.
 
