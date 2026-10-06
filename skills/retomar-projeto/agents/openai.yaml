@@ -1,0 +1,6 @@
+interface:
+  display_name: "Retomar projeto"
+  short_description: "Retome, execute e revise projetos de desenvolvimento"
+  default_prompt: "Use $retomar-projeto para reconstruir o contexto deste projeto e concluir o objetivo autorizado com validação adequada."
+policy:
+  allow_implicit_invocation: true
