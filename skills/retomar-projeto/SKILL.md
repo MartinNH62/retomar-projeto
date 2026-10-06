@@ -1,58 +1,58 @@
 ---
 name: retomar-projeto
-description: Retomar, executar ou revisar um projeto de desenvolvimento a partir das instruções, fontes e estado real disponíveis. Use para continuar trabalho, implementar um objetivo ou avaliar mudanças em código, aplicativos, sites, bibliotecas e ferramentas, com ou sem Git e documentação de estado. Não usar para perguntas conceituais avulsas sem trabalho no projeto.
+description: Resume, execute, or review development work using the available project instructions, sources, and actual state. Use to continue a project, implement an objective, or assess changes, with or without Git or state documentation. Do not use for standalone conceptual questions without project work.
 ---
 
-# Retomar projeto com evidências
+# Resume development work with evidence
 
-Reconstrua o contexto mínimo necessário, conclua o trabalho autorizado e deixe uma continuidade verificável. Adapte o processo à linguagem, ao ambiente e às convenções do projeto; não imponha uma estrutura de documentação ou um sistema de checkpoints.
+Reconstruct the minimum context needed, complete the authorized work, and leave a verifiable handoff. Adapt to the project's language, environment, and conventions; do not impose a documentation structure or checkpoint system. Follow the user's explicit instructions over this skill's guidelines. Communicate in the user's preferred language; English instructions do not require English responses. Follow project conventions for code and documentation.
 
-## Encontrar o contexto atual
+## Establish the current context
 
-- Identifique o repositório, pasta, snapshot ou fonte conectada indicado pelo usuário. Em monorepos ou múltiplos repositórios, delimite os componentes afetados e as instruções que se aplicam a cada um. Não escolha um projeto pelo nome de um chat ou de um diretório temporário.
-- Leia as instruções aplicáveis e os documentos relevantes que existirem: README, especificação, decisões, tarefas ou registro de estado. Localize o trecho corrente pela versão, data e relação com o trabalho real; não presuma que a primeira seção é a mais recente. Consulte detalhes conforme forem necessários.
-- Confirme o estado das fontes: arquivos pertinentes, alterações existentes e, quando houver Git, branch/HEAD e mudanças rastreadas, staged e não rastreadas. Sem Git, use o inventário relevante disponível; não inicialize um repositório só para retomar.
-- Se não houver documentação de estado, reconstrua o contexto pela solicitação, código, configuração, testes e histórico disponível. Diga o que foi inferido. Não crie um conjunto de documentos como condição para começar.
-- Relatórios e resumos de chats são pistas, não prova de execução. Se fontes divergem, confira versões e implementação; não confunda o que está implementado com o que deveria estar. Resolva o que as evidências permitem. Pergunte somente se a ambiguidade restante muda materialmente o escopo ou a correção, enquanto avança no trabalho independente.
-- Quando houver limitação de acesso, use as fontes acessíveis e identifique sua versão e alcance. Não apresente snapshot como estado atual nem prometa operações que o ambiente não suporta.
+- Identify the repository, directory, snapshot, or connected source specified by the user. For monorepos or multiple repositories, identify the affected components and the instructions applicable to each. Do not select a project based on a chat title or temporary directory name.
+- Read applicable instructions and relevant documents that exist: README, specification, decisions, tasks, or state records. Locate the current section by version, date, and its relation to actual work; do not assume the first section is the latest. Consult details as needed.
+- Confirm the source state: relevant files, existing edits, and, when Git is available, branch/HEAD plus tracked, staged, and untracked changes. Without Git, use the relevant available inventory; do not initialize a repository merely to resume work.
+- When state documentation is absent, reconstruct context from the request, code, configuration, tests, and available history. Identify inferences. Do not require a set of documents before starting.
+- Reports and chat summaries are leads, not proof of execution. If sources disagree, check versions and implementation; distinguish what exists from what is intended. Resolve what the evidence allows. Ask only when remaining ambiguity materially affects scope or correctness, while advancing independent work.
+- When access is limited, use accessible sources and identify their version and scope. Do not present a snapshot as current state or promise operations the environment cannot support.
 
-## Escolher o modo pela solicitação
+## Select modes from the request
 
-**Retomar:** identifique o objetivo, o que já foi feito, pendências e próximo passo. Se o usuário pediu continuidade de execução, prossiga dentro do escopo autorizado; se pediu apenas diagnóstico ou status, entregue essa análise. Não reduza um pedido de ação a um plano por ter iniciado pela retomada.
+**Resume:** identify the objective, completed work, outstanding items, and next step. If the user requests continued execution, proceed within the authorized scope; if they request diagnosis or status only, provide that analysis. Do not reduce an action request to a plan because it began with resuming work.
 
-**Executar:** traduza o objetivo em critérios observáveis de conclusão, usando os critérios existentes quando disponíveis. Implemente, valide e corrija falhas relacionadas até cumprir o objetivo. Decida escolhas rotineiras sem novas aprovações. Uma autorização para o objetivo pode abranger vários passos; uma autorização expressamente limitada a um incremento não abrange os seguintes.
+**Execute:** translate the objective into observable completion criteria, reusing existing criteria where available. Implement, validate, and fix related failures until the objective is met. Make routine choices without additional approvals. Authorization for an objective may cover multiple steps; authorization expressly limited to one increment does not cover subsequent increments.
 
-**Revisar:** identifique o alvo e a comparação relevante: mudanças locais, commit, branch, PR ou comportamento. Confirme a base em vez de assumir main ou HEAD; sem Git, delimite os arquivos/comportamentos avaliados. Confronte requisitos, implementação e evidências. Examine regressões, caminhos de erro e integrações pertinentes. Relate cada achado acionável com localização, condição de ocorrência, impacto e evidência; diferencie suspeitas não confirmadas. Não corrija código em revisão somente leitura. Se a correção também estiver autorizada, registre achado, mudança e validação posterior.
+**Review:** identify the target and relevant comparison: local changes, commit, branch, PR, or behavior. Confirm the base rather than assuming main or HEAD; without Git, delimit the files and behaviors assessed. Compare requirements, implementation, and evidence. Examine relevant regressions, error paths, and integrations. Report each actionable finding with location, triggering condition, impact, and evidence; distinguish unconfirmed concerns. Do not edit code in a read-only review. When fixes are also authorized, record the finding, change, and subsequent validation.
 
-Combine modos conforme o pedido, sem exigir chats separados. Uma revisão do próprio implementador não é revisão independente. Ausência de achados não prova correção fora do alcance inspecionado.
+Combine modes as requested without requiring separate chats. An implementer's self-review is not independent review. No findings does not establish correctness beyond the inspected scope.
 
-## Conduzir o trabalho
+## Carry out the work
 
-- Preserve alterações existentes e artefatos de outros trabalhos, inclusive mudanças staged e arquivos não rastreados. Não restaure, formate em massa ou faça limpeza para obter um estado artificialmente limpo.
-- Se outra sessão puder alterar as mesmas fontes, confira sua versão antes de gravar. Releia e integre alterações compatíveis; isole tarefas quando útil e disponível. Interrompa apenas a edição conflitante se não puder preservar ambos os trabalhos, continuando as partes independentes.
-- Reutilize o ambiente e os comandos documentados. Quando faltarem, descubra a cadeia de build/teste pela configuração. Instale ou ajuste dependências apenas quando necessário à tarefa e permitido; não faça upgrades gerais como parte incidental de uma retomada.
-- Prefira ferramentas que tenham acesso às fontes e aos artefatos originais. Empacote ou copie arquivos quando a transferência for necessária, com identidade da versão; não transforme ZIPs e hashes em obrigação para toda entrega.
-- Preserve os limites de autorização da solicitação e do projeto. A skill não concede permissão adicional para publicar, enviar mensagens, migrar dados ou fazer operações Git. Quando essas ações já estiverem autorizadas, não solicite confirmação novamente apenas por usar a skill.
+- Preserve existing changes and artifacts from other work, including staged changes and untracked files. Do not restore files, apply broad formatting, or clean up merely to obtain an artificially clean state.
+- If another session may change the same sources, check their version before writing. Reread and integrate compatible changes; isolate tasks when useful and available. Stop only the conflicting edit when both changes cannot be preserved, and continue independent work.
+- Reuse the documented environment and commands. When they are missing, discover the build/test toolchain from configuration. Install or adjust dependencies only when necessary and permitted; do not perform general upgrades incidentally while resuming work.
+- Prefer tools with access to original sources and artifacts. Package or copy files when transfer is necessary, identifying the version; do not require ZIPs or hashes for every delivery.
+- Preserve the request's and project's authorization boundaries. This skill grants no additional permission to publish, send messages, migrate data, or perform Git operations. When those actions are already authorized, do not request confirmation again merely because this skill is being used.
 
-## Validar na medida da mudança
+## Validate in proportion to the change
 
-- Escolha verificações que demonstrem os critérios de conclusão e cubram regressões plausíveis. Diferencie inspeção estática, teste unitário, integração e execução no ambiente real; declare quais camadas foram verificadas.
-- Reutilize um resultado anterior somente se houver evidência de que o código, dependências, configuração e ambiente relevantes ao comportamento continuam equivalentes. Se isso não puder ser confirmado, rode a verificação pertinente ou marque-a como não verificada. Identifique resultados reutilizados sem tratá-los como execução nova.
-- Falha preexistente não é automaticamente causada pela mudança. Compare com uma referência ou evidência anterior quando possível; registre falhas novas, antigas e não classificadas separadamente. Não ajuste um teste para ocultar uma regressão.
-- Em correção de defeito, reproduza a condição quando viável e valide o comportamento esperado após a mudança. Acrescente teste de regressão quando útil; não crie testes que apenas espelhem a implementação ou mudanças triviais sem risco relevante.
-- Se uma verificação estiver bloqueada, conclua o trabalho que não depende dela e registre a limitação. Não anuncie entrega validada ou aprovação de checkpoint com evidência incompleta. Cumprir critérios técnicos não substitui uma aprovação humana exigida pelo projeto.
-- Evite ciclos de tentativas idênticas. Depois de uma falha, altere a hipótese ou obtenha nova evidência antes de repetir. Não encerre um objetivo solucionável só por encontrar a primeira dificuldade.
+- Choose checks that demonstrate completion criteria and cover plausible regressions. Distinguish static inspection, unit testing, integration testing, and execution in the actual environment; state which layers were checked.
+- Reuse a previous result only with evidence that the code, dependencies, configuration, and environment relevant to the behavior remain equivalent. If equivalence cannot be confirmed, run the relevant check or mark it unverified. Identify reused results without presenting them as newly executed checks.
+- A preexisting failure is not automatically caused by the change. Compare against a reference or earlier evidence when possible; record new, preexisting, and unclassified failures separately. Do not alter a test to conceal a regression.
+- When fixing a defect, reproduce the triggering condition when feasible and validate the expected behavior afterward. Add a regression test when useful; do not create tests that merely mirror the implementation or trivial changes without meaningful risk.
+- If a check is blocked, complete work that does not depend on it and record the limitation. Do not claim validated delivery or checkpoint approval with incomplete evidence. Meeting technical criteria does not replace human approval required by the project.
+- Avoid repeating identical attempts. After a failure, change the hypothesis or obtain new evidence before retrying. Do not abandon a solvable objective at the first difficulty.
 
-## Deixar a próxima retomada pronta
+## Prepare the next handoff
 
-Use os registros existentes do projeto. Atualize o estado durante execução quando isso fizer parte do trabalho; mantenha decisões relevantes e pendências com sua condição de resolução. Sem registro existente, deixe um resumo na entrega ou um único arquivo de continuidade quando a duração/complexidade justificar. Não crie documentação redundante.
+Use existing project records. Update state during execution when it is part of the work; retain relevant decisions and outstanding items with their resolution conditions. Without existing records, provide a delivery summary or a single handoff file when duration or complexity justifies it. Avoid redundant documentation.
 
-Registre objetivo e escopo, resultado, arquivos ou componentes afetados, verificações realmente executadas/reutilizadas, limitações e próximo passo, na medida necessária para outra sessão continuar. Não registre credenciais nem dados privados desnecessários.
+Record the objective and scope, outcome, affected files or components, checks actually executed or reused, limitations, and next step to the extent another session needs to continue. Do not record credentials or unnecessary private data.
 
-Em revisão somente leitura, entregue o parecer no chat ou destino autorizado sem alterar o estado técnico. Se houver dependência externa, deixe a preparação útil concluída e identifique a informação ou ação mínima que falta. Na resposta, apresente resultado, validação e limitações materiais, com links acessíveis quando úteis.
+For read-only reviews, deliver the assessment in chat or another authorized destination without changing technical state. When an external dependency remains, complete useful preparation and identify the minimum missing information or action. In the response, present the outcome, validation, and material limitations, with accessible links when useful.
 
-## Exemplos de pedidos
+## Example requests
 
-- `$retomar-projeto Retome este projeto e conclua o objetivo já autorizado.`
-- `$retomar-projeto Implemente esta funcionalidade e valide os critérios de aceitação.`
-- `$retomar-projeto Revise as mudanças desta branch contra a base indicada, sem editar código.`
+- `$retomar-projeto Resume this project and complete the already authorized objective.`
+- `$retomar-projeto Implement this feature and validate its acceptance criteria.`
+- `$retomar-projeto Review this branch against the specified base without editing code.`
