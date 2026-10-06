@@ -2,14 +2,15 @@
 
 [Português (Brasil)](README.pt-BR.md) · [Contributing](CONTRIBUTING.md)
 
-A reusable Codex skill for resuming, executing, and reviewing development work from project instructions, accessible sources, and actual state.
+A reusable Codex skill for completing authorized development increments from project instructions, accessible sources, and actual state.
 
 Works across codebases, applications, websites, libraries, and tools, with or without Git or state documentation. It adapts to the project's language, environment, and conventions. The stable identifier `retomar-projeto` means “resume project” in Portuguese.
 
 ## What it does
 
 - Reconstructs context and distinguishes current state from historical records.
-- Completes authorized work while preserving existing changes.
+- Implements, validates, repairs, and records each authorized increment while preserving existing changes.
+- Retrieves accessible context directly and continues authorized work without asking the user to relay prompts between chats.
 - Reviews a defined target against a confirmed base and reports evidence-backed findings.
 - Selects appropriate validation and identifies reused results and limitations.
 - Leaves enough context for the next session to continue.
@@ -41,10 +42,18 @@ $retomar-projeto Implement [feature]. Acceptance criteria: [observable outcomes]
 ```
 
 ```text
+$retomar-projeto Complete the authorized increments in this plan, validating and recording each before continuing.
+```
+
+```text
 $retomar-projeto Review this branch against [base] without editing code.
 ```
 
-Provide the relevant sources and project tools. A skill supplies reusable instructions; it does not grant access to someone else's files, accounts, or environment. Authorization follows the user's request and execution environment.
+Execution requests should produce an implemented and checked result, not just a plan or a prompt to paste into another chat. The agent uses available tools to retrieve context and updates project records directly. It continues to the next increment when that increment is already authorized. Explicit requests for planning or read-only review retain their limited scope.
+
+If a referenced brief is inaccessible, the agent can proceed from the authorized objective and accessible evidence when they sufficiently define the work; otherwise, it requests only the missing decision or access. A blocked check is reported as incomplete validation, not successful delivery. Technical completion does not replace required human gate approval.
+
+Make the project sources and necessary tools available. A skill supplies instructions; it does not grant file/account access, automatically synchronize ChatGPT/Work/Codex, or schedule unattended execution. Authorization follows the user's request and execution environment. See [how skills complement tools](https://developers.openai.com/plugins/concepts/skills).
 
 ## Contribute
 
